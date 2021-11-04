@@ -1,0 +1,300 @@
+/*
+ * Général
+ * ******* */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/RitaBack.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 5% auto auto auto 5%;
+    grid-template-rows: 7vh 88vh auto auto 250px;
+    grid-template-areas: "nav nav nav nav nav"
+        "header header header header header"
+        ". card card card ."
+        ". . form . ."
+        "footer footer footer footer footer";
+}
+
+/*
+ * Navbar
+ * ****** */
+
+.navbar {
+    display: flex;
+    grid-area: nav;
+    background-color: rgb(134, 140, 202);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid;
+    border-color: rgb(62, 57, 90);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(62, 57, 90);
+}
+
+.item-menu {
+    padding: 0 15px;
+}
+
+/*
+ * Header
+ * ****** */
+
+.header {
+    grid-area: header;
+    background-image: url("../images/Rita.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid;
+    border-color: rgb(62, 57, 90);
+}
+
+/*
+ * Cards
+ * ***** */
+
+.cards {
+    grid-area: card;
+    background-color: rgb(134, 140, 202);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-color: rgb(62, 57, 90);
+    border-radius: 5px;
+    
+}
+
+.card {
+    width: 30vw;
+    border: solid 1px white;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.textcard {
+    width: 15vw;
+}
+
+.imgcard1 img {
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.imgcard2 img {
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.imgcard1 img:hover {
+    box-shadow: 10px 0px 10px black;
+}
+
+.imgcard2 img:hover {
+    box-shadow: -10px 0px 10px black;
+}
+
+/*
+ * Formulaire
+ * ********** */
+
+.form {
+    grid-area: form;
+    background-color: rgb(134, 140, 202);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: rgb(62, 57, 90);
+    border-style: solid;
+}
+
+/*
+ * Footer
+ * ****** */
+
+footer {
+    grid-area: footer;
+    border-top: solid;
+    background-color: rgb(62, 57, 90);
+    border-color: rgb(134, 140, 202);
+    color: rgb(134, 140, 202);
+    box-shadow: 0px 0px 10px 5px black;
+}
+
+.item-footer a:hover {
+    color: rgb(134, 140, 202);
+}
+
+.logofooter {
+    display: flex;
+    margin-top: 5px;
+    height: 175px;
+    width: 175px;
+    margin-left: 5em;
+}
+
+.logofooter img {
+    height: 100%;
+    width: 100%;
+}
+
+.newsteller {
+    margin-top: 5px;
+}
+
+/*
+ * Responsive
+ * ********** */
+
+@media  (max-width: 1024px) {
+
+    .all {
+    grid-template-areas: "nav nav nav nav nav"
+    "header header header header header"
+    ". card card card ."
+    ". form form form ."
+    "footer footer footer footer footer";
+    }
+
+     .card {
+         display: flex;
+         text-align: center;
+         width: auto;
+         height: auto;
+     }
+
+     .textcard {
+         display: flex;
+         justify-content: center;
+         width: auto;
+     }
+
+     .thecards.row.space-around {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .inthecard.row {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .imgcard1 img {
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .imgcard2 img {
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .imgcard1 img:hover {
+        box-shadow: 0px 10px 10px 0px black;
+    }
+    
+    .imgcard2 img:hover {
+        box-shadow: 0px -10px 10px black;
+    }
+
+     .nameemail.row.space-around {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .formarea.col.w-25 {
+         width: 100%;
+     }
+
+     footer.row.space-around {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: auto;
+     }
+
+     .logofooter {
+         height: 75px;
+         width: 75px;
+     }
+}
+
+/*
+ * Flex
+ * **** */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-b-1 {
+    margin-bottom: 1%;
+}
+
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-ali-center {
+    text-align: center;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-70 {
+    width: 70%;
+}
