@@ -1,4 +1,12 @@
 /*
+ * Importation
+ * *********** */
+@import url("variable.css");
+
+
+
+
+/*
  * Général
  * ******* */
 
@@ -29,11 +37,11 @@ body {
 .navbar {
     display: flex;
     grid-area: nav;
-    background-color: rgb(134, 140, 202);
+    background-color: var(--light-purple);
     justify-content: space-between;
     align-items: center;
     border-bottom: solid;
-    border-color: rgb(62, 57, 90);
+    border-color: var(--dark-purple);
 }
 
 li {
@@ -47,7 +55,7 @@ a {
 }
 
 a:hover {
-    color: rgb(62, 57, 90);
+    color: var(--dark-purple);
 }
 
 .item-menu {
@@ -64,7 +72,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: solid;
-    border-color: rgb(62, 57, 90);
+    border-color: var(--dark-purple);
 }
 
 /*
@@ -73,11 +81,11 @@ a:hover {
 
 .cards {
     grid-area: card;
-    background-color: rgb(134, 140, 202);
+    background-color: var(--light-purple);
     margin-top: 5px;
     margin-bottom: 5px;
     border-style: solid;
-    border-color: rgb(62, 57, 90);
+    border-color: var(--dark-purple);
     border-radius: 5px;
     
 }
@@ -121,10 +129,10 @@ a:hover {
 
 .form {
     grid-area: form;
-    background-color: rgb(134, 140, 202);
+    background-color: var(--light-purple);
     margin-bottom: 10px;
     border-radius: 5px;
-    border-color: rgb(62, 57, 90);
+    border-color: var(--dark-purple);
     border-style: solid;
 }
 
@@ -135,14 +143,14 @@ a:hover {
 footer {
     grid-area: footer;
     border-top: solid;
-    background-color: rgb(62, 57, 90);
-    border-color: rgb(134, 140, 202);
-    color: rgb(134, 140, 202);
+    background-color: var(--dark-purple);
+    border-color: var(--light-purple);
+    color: black;
     box-shadow: 0px 0px 10px 5px black;
 }
 
 .item-footer a:hover {
-    color: rgb(134, 140, 202);
+    color: var(--light-purple);
 }
 
 .logofooter {
@@ -151,6 +159,10 @@ footer {
     height: 175px;
     width: 175px;
     margin-left: 5em;
+}
+
+.logofooter {
+    margin-right: 30%;
 }
 
 .logofooter img {
@@ -240,8 +252,9 @@ footer {
      }
 
      .logofooter {
-         height: 75px;
-         width: 75px;
+         margin-right: 50%;
+         height: 40px;
+         width: 40px;
      }
 }
 
@@ -257,6 +270,14 @@ footer {
 .col {
     display: flex;
     flex-direction: column;
+}
+
+.margin-t-1 {
+    margin-top: 1%;
+}
+
+.margin-t-5 {
+    margin-top: 5%;
 }
 
 .margin-b-1 {
